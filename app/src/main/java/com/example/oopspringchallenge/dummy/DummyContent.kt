@@ -1,5 +1,6 @@
 package com.example.oopspringchallenge.dummy
 
+import com.example.oopspringchallenge.model.AOEobject
 import java.util.ArrayList
 import java.util.HashMap
 
@@ -14,12 +15,12 @@ object DummyContent {
     /**
      * An array of sample (dummy) items.
      */
-    val ITEMS: MutableList<DummyItem> = ArrayList()
+    val ITEMS: MutableList<AOEobject> = ArrayList()
 
     /**
      * A map of sample (dummy) items, by ID.
      */
-    val ITEM_MAP: MutableMap<String, DummyItem> = HashMap()
+    val ITEM_MAP: MutableMap<String, AOEobject> = HashMap()
 
     private val COUNT = 25
 
@@ -30,9 +31,9 @@ object DummyContent {
         }
     }
 
-    private fun addItem(item: DummyItem) {
+    private fun addItem(item:AOEobject) {
         ITEMS.add(item)
-        ITEM_MAP.put(item.id, item)
+        ITEM_MAP.put(item.id.toString(), item)
     }
 
     private fun createDummyItem(position: Int): DummyItem {
